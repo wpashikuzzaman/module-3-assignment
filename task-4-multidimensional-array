@@ -1,0 +1,17 @@
+<?php
+function calculateAverageGrades($studentGrades) {
+    foreach ($studentGrades as $student => $grades) {
+        $totalGrades = array_sum($grades);
+        $averageGrade = $totalGrades / count($grades);
+        echo "Average grade for $student: $averageGrade<br>";
+    }
+}
+
+$studentGrades = array(
+    'Student1' => array('Math' => 85, 'English' => 90, 'Science' => 88),
+    'Student2' => array('Math' => 78, 'English' => 80, 'Science' => 82),
+    'Student3' => array('Math' => 92, 'English' => 88, 'Science' => 90)
+);
+
+calculateAverageGrades($studentGrades);
+?>
