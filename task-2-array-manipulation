@@ -1,0 +1,11 @@
+<?php
+function removeEvenNumbers($numbers) {
+    $oddNumbers = array_filter($numbers, function($num) {
+        return $num % 2 !== 0;
+    });
+    echo "Array after removing even numbers: " . implode(', ', $oddNumbers);
+}
+
+$numbers = range(1, 10);
+removeEvenNumbers($numbers);
+?>
